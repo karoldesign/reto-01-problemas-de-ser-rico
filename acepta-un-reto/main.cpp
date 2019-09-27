@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-void getQuantity() {
+int getQuantity() {
     
     unsigned int nCompartimentos, capacidadMayor, diferencia, i;
     
@@ -32,24 +32,19 @@ void getQuantity() {
         cin >> diferencia;
     }
     
-    // Primero creamos el array con el número de espacios que tenga los compartimentos
-    int total = 0;
+    // Total de litros
+    int total = capacidadMayor;
+    int aux = 0;
+    ++aux+= capacidadMayor;
     
-    //Añadimos la capacidad del mayor
-    ++total+= capacidadMayor;
-    
-    for (i = 0; i < nCompartimentos; i++) {
-        int add = capacidadMayor - diferencia;
-        ++total+= add;
+    for (i = 0; i < nCompartimentos - 1; i++) {
+        int add = aux - diferencia;
+        total += add - 1;
+        aux = add;
+        
     }
     
-    // Después de añadir en el array todas las cantidades de los compartimentos, entonces sumamos
-    
-    
-    
-    
-    
-    
+    return total;
     
 }
 
@@ -64,7 +59,9 @@ int main() {
     
     if ( numCasos > 0) {
         for (i = 0; i < numCasos; ++i) {
-            getQuantity();
+            int num = 0;
+            num = getQuantity();
+            cout << num;
         }
     }
     
