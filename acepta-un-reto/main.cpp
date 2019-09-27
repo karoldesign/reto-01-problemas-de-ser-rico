@@ -33,17 +33,19 @@ void getQuantity() {
     }
     
     // Primero creamos el array con el número de espacios que tenga los compartimentos
-    int total[nCompartimentos];
+    int total = 0;
     
     //Añadimos la capacidad del mayor
-    ++total[capacidadMayor];
+    ++total+= capacidadMayor;
     
     for (i = 0; i < nCompartimentos; i++) {
         int add = capacidadMayor - diferencia;
-        ++total[add];
+        ++total+= add;
     }
     
     // Después de añadir en el array todas las cantidades de los compartimentos, entonces sumamos
+    
+    
     
     
     
