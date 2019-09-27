@@ -1,15 +1,41 @@
+//---------------------------------------------------------
+// Problema <num> <Titulo>
 //
-//  main.cpp
-//  acepta-un-reto
+// https://www.aceptaelreto.com
 //
-//  Created by Carolina Chamorro on 20/09/2019.
-//  Copyright © 2019 Carolina Chamorro. All rights reserved.
-//
+// <Carolina Chamorro Saldaña>
+//---------------------------------------------------------
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+void getQuantity() {
+    
+    unsigned int nCompartimentos, capacidad, diferencia;
+    cout << "Número de compartimentos:";
+    cin >> nCompartimentos;
+    cout << "Capacidad del más grande en litros:";
+    cin >> capacidad;
+    cout << "Diferencia de litros de dos compartimentos adyacentes:";
+    cin >> capacidad;
+    
+    
 }
+
+//---------------------------------------------------------
+
+int main() {
+    
+    unsigned int numCasos, i;
+    
+    cin >> numCasos;
+    
+    if ( numCasos > 0) {
+        for (i = 0; i < numCasos; ++i) {
+            getQuantity();
+        }
+    }
+    
+    return 0;
+    
+} // main
